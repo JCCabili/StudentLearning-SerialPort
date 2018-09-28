@@ -1,0 +1,10 @@
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\bin\Debug\ThermalPrinter.exe.config
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\bin\Debug\ThermalPrinter.exe
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\bin\Debug\ThermalPrinter.pdb
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\obj\Debug\ThermalPrinter.ThermalPrinter.resources
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\obj\Debug\ThermalPrinter.Properties.Resources.resources
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\obj\Debug\ThermalPrinter.csproj.GenerateResource.cache
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\obj\Debug\ThermalPrinter.csproj.CoreCompileInputs.cache
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\obj\Debug\ThermalPrinter.exe
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\obj\Debug\ThermalPrinter.pdb
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\ThermalPrinter\obj\Debug\ThermalPrinter.csprojAssemblyReference.cache

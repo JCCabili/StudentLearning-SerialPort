@@ -1,0 +1,10 @@
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\bin\Debug\SerialCom.exe.config
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\bin\Debug\SerialCom.exe
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\bin\Debug\SerialCom.pdb
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\obj\Debug\SerialCom.csprojAssemblyReference.cache
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\obj\Debug\SerialCom.Properties.Resources.resources
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\obj\Debug\SerialCom.csproj.GenerateResource.cache
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\obj\Debug\SerialCom.csproj.CoreCompileInputs.cache
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\obj\Debug\SerialCom.exe
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\obj\Debug\SerialCom.pdb
+D:\LaboratoryCodes\2018\Student_Learning\SerialCom\SerialCom\obj\Debug\SerialCom.SerialForm.resources
