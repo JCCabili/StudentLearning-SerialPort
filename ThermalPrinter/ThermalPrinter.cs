@@ -18,7 +18,7 @@ namespace ThermalPrinter
     {
         private SerialPort _serialPort;
         private List<string> _receipt;
-        private int _printerMaxLenght = 29;
+        private int _printerMaxLenght = 13;
         public ThermalPrinter()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace ThermalPrinter
         private void LoadInitial()
         {
             _receipt = new List<string>();
-            LoadPrinter();
+            if (LoadPrinter()) MessageBox.Show("Device loaded.");
             addHeaders();
         }
 
@@ -35,12 +35,14 @@ namespace ThermalPrinter
         {
             foreach (var item in _receipt)
             {
-                _serialPort.Write(item);
-                _serialPort.Write("LF");
+                _serialPort.WriteLine(item);
+                _serialPort.WriteLine(" ");
             }
 
+            //_serialPort.WriteLine("Testing");
             
-            MessageBox.Show("Printing...");
+
+            //MessageBox.Show("Printing...");
         }
 
         /// <summary>
@@ -52,8 +54,13 @@ namespace ThermalPrinter
             try
             {
                 _serialPort = new SerialPort();
-                _serialPort.PortName = "COM4";
+                _serialPort.PortName = "COM7";
                 _serialPort.BaudRate = 9600;
+                _serialPort.DataBits = 8;
+                _serialPort.Parity = Parity.None;
+                _serialPort.StopBits = StopBits.One;
+                _serialPort.Handshake = Handshake.None;
+                _serialPort.Encoding = System.Text.Encoding.Default;
                 _serialPort.Open();
                 
                 return true;
@@ -78,9 +85,9 @@ namespace ThermalPrinter
 
         private void addHeaders()
         {
-            this.addMessage("Ayala Center Makati");
-            this.addMessage("Makati Avenue corner, Ayala Avenue, Makati, 1200 Metro ");
-            this.addMessage("Phone: (02) 813 8888");
+            this.addMessage("Ayala Center Makati".ToUpper());
+            this.addMessage("Makati Avenue corner, Ayala Avenue, Makati, 1200 Metro ".ToUpper());
+            this.addMessage("Phone: (02) 813 8888".ToUpper());
         }
         private void addMessage(string message)
         {

@@ -50,7 +50,7 @@ namespace SerialCom
             try
             {
                 _serialPort = new SerialPort();
-                _serialPort.PortName = "COM4";
+                _serialPort.PortName = "COM7";
                 _serialPort.BaudRate = 9600;
                 _serialPort.DataReceived += new SerialDataReceivedEventHandler(coinReceive);
                 _serialPort.Disposed += new EventHandler(coinReceive_dispose);
@@ -121,6 +121,11 @@ namespace SerialCom
         private void btnStop_Click(object sender, EventArgs e)
         {
             CloseDevice();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            _serialPort.Write("RESET");
         }
     }
 }
