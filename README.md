@@ -3,11 +3,18 @@
 ```
 Setting : N0 // very important dont use NC.
 Connection:
-Counter > Pin 2
+Coin Acceptor
++ 5V
+- GND
+Counter
+
+Microcontroller
+- GND
+PIN 2 (Interrupt Pin 0)
 ```
 
 Reminder:
-Always connect your grd to your arduino.
+Always connect your GND to your arduino.
 
 
 
