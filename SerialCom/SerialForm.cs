@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,6 +20,7 @@ namespace SerialCom
 
         private SerialPort _serialPort;
         private StringBuilder messages;
+        private int amount = 0;
         public SerialForm()
         {
             InitializeComponent();
@@ -31,10 +33,6 @@ namespace SerialCom
                 messages.AppendLine("Device connected.");
             else
                 messages.AppendLine("Loading device failed.");
-
-
-            displayMessage();
-
         }
         private void LoadInitial()
         {
@@ -50,10 +48,9 @@ namespace SerialCom
             try
             {
                 _serialPort = new SerialPort();
-                _serialPort.PortName = "COM7";
+                _serialPort.PortName = "COM4";
                 _serialPort.BaudRate = 9600;
                 _serialPort.DataReceived += new SerialDataReceivedEventHandler(coinReceive);
-                _serialPort.Disposed += new EventHandler(coinReceive_dispose);
                 _serialPort.Open();
                 
                 return true;
@@ -72,9 +69,7 @@ namespace SerialCom
             {
                 _serialPort.Close();
                 messages.AppendLine("Device close.");
-                displayMessage();
             }
-            
         }
         /// <summary>
         /// This event is triggered when data receive.
@@ -100,24 +95,15 @@ namespace SerialCom
         /// <param name="messasge"></param>
         private void dataReceive(string messasge)
         {
-            messages.AppendLine(messasge);
-            displayMessage();
+            if (messasge == "1\r")
+                amount++;
+            txtMessages.Text = amount.ToString();
         }
         /// <summary>
         /// This event triggers when the data receiving is done.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void coinReceive_dispose(object sender, EventArgs e)
-        {
-           // this method call when the receiving data end.
-        }
-
-        private void displayMessage()
-        {
-            txtMessages.Text = messages.ToString();
-        }
-
         private void btnStop_Click(object sender, EventArgs e)
         {
             CloseDevice();
@@ -125,7 +111,9 @@ namespace SerialCom
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _serialPort.Write("RESET");
+            amount = 0;
         }
+
+      
     }
 }

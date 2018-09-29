@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialCom", "SerialCom\Seri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThermalPrinter", "ThermalPrinter\ThermalPrinter.csproj", "{53F29247-C639-46F4-914E-4F69A05C0798}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ino", "ino", "{AB18DDA5-33E7-4413-9298-CF20BF946C3D}"
+	ProjectSection(SolutionItems) = preProject
+		coin.ino = coin.ino
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
